@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie - Cultural Bajzel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #40e0d0;
+        }
+
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #40e0d0;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Logowanie</h2>
+        <form th:action="@{/login}" method="post">
+			<input type="text" id="username" name="username" placeholder="Username" required autofocus>
+			<input type="password" id="password" name="password" placeholder="Password" required>
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+			<button type="submit">LOGIN</button>
+			<div th:if="${error}" th:text="${error}"></div>
+			
+		</form>
+		
+        <a href="#">Nie pamiętasz hasła?</a>
+        <a href="#">Zarejestruj się</a>
+    </div>
+</body>
+</html>

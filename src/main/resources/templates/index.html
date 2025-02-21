@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Taneczno-Artystyczne Cultural Bajzel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff6600;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #ff6600;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #40e0d0;
+            color: #121212;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('placeholder-hero.jpg') no-repeat center/cover;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ff6600;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section h3 {
+            color: #ff6600;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #40e0d0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff6600;
+        }
+
+        .user-account {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .user-account h3 {
+            margin-bottom: 10px;
+            color: #40e0d0;
+        }
+
+        .user-account p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Studio Taneczno-Artystyczne Cultural Bajzel</h1>
+</header>
+
+<nav>
+    <a href="#about">O nas</a>
+    <a href="#classes">Zajęcia</a>
+    <a href="#gallery">Galeria</a>
+    <a href="#user">Moje konto</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section class="hero">
+    <h2>Witamy w Cultural Bajzel</h2>
+    <p>Miejsce, gdzie taniec i sztuka spotykają się w jednym rytmie.</p>
+</section>
+
+<section class="section" id="about">
+    <h3>O nas</h3>
+    <p>Studio Taneczno-Artystyczne Cultural Bajzel to przestrzeń dla każdego miłośnika tańca i sztuki. Nasze zajęcia są odpowiednie dla dzieci, młodzieży i dorosłych, bez względu na poziom zaawansowania.</p>
+</section>
+
+<section class="section" id="classes">
+    <h3>Zajęcia</h3>
+    <p>Oferujemy różnorodne style taneczne, w tym hip-hop, jazz, contemporary i wiele innych. Sprawdź nasz grafik i znajdź zajęcia dla siebie!</p>
+</section>
+
+<section class="section gallery" id="gallery">
+    <h3>Galeria</h3>
+    <img src="placeholder1.jpg" alt="Zdjęcie 1">
+    <img src="placeholder2.jpg" alt="Zdjęcie 2">
+    <img src="placeholder3.jpg" alt="Zdjęcie 3">
+    <img src="placeholder4.jpg" alt="Zdjęcie 4">
+</section>
+
+<section class="section" id="contact">
+    <h3>Kontakt</h3>
+    <p>Adres: ul. Przykładowa 123, Dąbrowa Górnicza</p>
+    <p>Email: kontakt@culturalbajzel.pl</p>
+    <p>Telefon: +48 123 456 789</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Cultural Bajzel. Wszelkie prawa zastrzeżone. | <a href="#">Polityka prywatności</a></p>
+</footer>
+
+</body>
+</html>
