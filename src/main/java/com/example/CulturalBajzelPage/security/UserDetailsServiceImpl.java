@@ -1,5 +1,7 @@
 package com.example.CulturalBajzelPage.security;
 
+import com.example.CulturalBajzelPage.security.user.User;
+import com.example.CulturalBajzelPage.security.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

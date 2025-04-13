@@ -1,5 +1,6 @@
 package com.example.CulturalBajzelPage.security;
 
+import com.example.CulturalBajzelPage.security.user.User;
 import lombok.Getter;
 
 @Getter

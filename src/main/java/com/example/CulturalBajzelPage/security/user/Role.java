@@ -1,4 +1,4 @@
-package com.example.CulturalBajzelPage.security;
+package com.example.CulturalBajzelPage.security.user;
 
 import jakarta.persistence.*;
 import lombok.Data;
